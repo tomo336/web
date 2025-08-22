@@ -36,7 +36,7 @@ int main(){
     float rad = atan2(Y, X);
     float value = hypot(X, Y);
 
-    //オムニホイールの出力
+    //オムニホイールの出力に関して
     pwm[0] = sin((rad-45)*M_PI/180.0f)*value;
     pmw[1] = sin((rad-135)*M_PI/180.0f)*value;
     pwm[2] = sin((rad-225)*M_PI/180.0f)*value;
@@ -48,6 +48,7 @@ int main(){
     can.write(msg); //特に理由がない限りwhile直下
  }
 }
+
 
 
 
