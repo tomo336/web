@@ -1,7 +1,6 @@
 #include "mbed.h"
 #include <iostream>
 #include <cmath>
-
 BufferedSerial pc(USBTX, USBRX, 115200);  //シリアル通信
 
 int16_t pwm[4] = {0, 0, 0, 0}; // pwm配列
@@ -49,4 +48,5 @@ int main(){
     can.write(msg); //特に理由がない限りwhile直下
  }
 }
+
 
